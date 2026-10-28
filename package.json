@@ -1,0 +1,27 @@
+{
+  "name": "kalender-kerja",
+  "version": "1.0.0",
+  "description": "Kalender kegiatan kerja dengan catatan revisi, export Excel, Google Sheets, dan chat tim",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "build": "node scripts/build-web.js",
+    "android:add": "npx cap add android",
+    "android:icons": "npx capacitor-assets generate --android",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:apk": "npm run android:sync && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/filesystem": "^7.0.0",
+    "@capacitor/share": "^7.0.0",
+    "xlsx": "0.18.5"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.0.0"
+  }
+}
